@@ -3,13 +3,14 @@ const switchImage = () => {
     let imgNumber = 0;
 
     const interval = setInterval(() => {
-        imgNumber = (imgNumber % 9) + 1;
+        imgNumber = (imgNumber % 12) + 1;
         bg.style.backgroundImage = `url(img/${imgNumber}.jpg)`
-    }, 500);
+    }, 300);
 
     setTimeout(() => {
         clearInterval(interval);
-    }, 6000)
+        bg.style.display = "none";
+    }, 4000)
 }
 
 switchImage();
