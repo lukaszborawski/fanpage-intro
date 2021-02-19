@@ -5,12 +5,12 @@ const switchImage = () => {
     const interval = setInterval(() => {
         imgNumber = (imgNumber % 10) + 1;
         bg.style.backgroundImage = `url(img/${imgNumber}.jpg)`
-    }, 600);
+    }, 850);
 
     setTimeout(() => {
         clearInterval(interval);
         bg.style.display = "none";
-    }, 6000)
+    }, 9000)
 }
 
 switchImage();

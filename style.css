@@ -25,7 +25,7 @@ body {
     text-transform: uppercase;
     color: white;
     opacity: 0;
-    animation: showText 7s ease 0s forwards;
+    animation: showText 10s ease 0s forwards;
 }
 
 @media (min-width: 992px) {
@@ -40,13 +40,13 @@ body {
     font-size: 150px;
     -webkit-text-stroke: 2px rgb(0, 0, 0);
     opacity: 0;
-    animation: intro 4s ease 3s forwards;
+    animation: intro 4s ease 5s forwards;
 }
 
 @media (min-width: 992px) {
     .container_title {
         font-size: 250px;
-        animation: intro-desktop 4s ease 2s forwards;
+        animation: intro-desktop 4s ease 5s forwards;
     }
 }
 
@@ -91,7 +91,7 @@ body {
     margin: 20px;
     color: white;
     opacity: 0;
-    animation: showText 7s ease 0s forwards;
+    animation: showText 10s ease 0s forwards;
     
 }
 
@@ -123,7 +123,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     transform: scale(1.1);
-    animation: hideBg 6s ease 0s forwards;
+    animation: hideBg 9s ease 0s forwards;
 }
 
 @keyframes hideBg {
