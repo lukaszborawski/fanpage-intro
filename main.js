@@ -1,16 +1,33 @@
+const bgIntro = document.querySelector(".container_bgIntro");
+const mediaQuery = window.matchMedia("(max-width: 576px)");
+const numberOfImgs = 5;
+
+
 const switchImage = () => {
-    const bg = document.querySelector(".background");
     let imgNumber = 0;
-
-    const interval = setInterval(() => {
-        imgNumber = (imgNumber % 10) + 1;
-        bg.style.backgroundImage = `url(img/${imgNumber}.jpg)`
-    }, 850);
-
-    setTimeout(() => {
-        clearInterval(interval);
-        bg.style.display = "none";
-    }, 9000)
+  
+    if (mediaQuery.matches) {
+        const interval = setInterval(() => {
+            imgNumber = (imgNumber % numberOfImgs) + 1;
+            bgIntro.style.backgroundImage = `url(img/${imgNumber}m.jpg)`
+        }, 850);
+        
+        setTimeout(() => {
+            clearInterval(interval);
+            bgIntro.style.backgroundImage = "";
+        }, 9000)
+    } else {
+        const interval = setInterval(() => {
+            imgNumber = (imgNumber % numberOfImgs) + 1;
+            bgIntro.style.backgroundImage = `url(img/${imgNumber}d.jpg)`
+        }, 850);
+        
+        setTimeout(() => {
+            clearInterval(interval);
+            bgIntro.style.backgroundImage = "";
+        }, 9000); 
+    }
+    
 }
 
 switchImage();
