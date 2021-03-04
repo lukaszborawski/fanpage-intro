@@ -3,20 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+.container {
     height: 100vh;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Roboto Condensed', sans-serif;
     overflow: hidden;
     background-image: radial-gradient(rgb(131, 10, 10), rgb(32, 32, 32));
 }
-.container {
-    display: flex;
-    flex-direction: column;
+
+.container_bgIntro {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    /* transform: scale(1.1); */
+    animation: hideBg 7s ease 0s forwards;
+    
+
+}
+
+@keyframes hideBg {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 .container_author {
     display: flex;
@@ -25,7 +48,7 @@ body {
     text-transform: uppercase;
     color: white;
     opacity: 0;
-    animation: showText 10s ease 0s forwards;
+    animation: showText 1s ease 6s forwards;
 }
 
 @media (min-width: 992px) {
@@ -40,13 +63,13 @@ body {
     font-size: 150px;
     -webkit-text-stroke: 2px rgb(0, 0, 0);
     opacity: 0;
-    animation: intro 4s ease 5s forwards;
+    animation: intro 6s ease 2s forwards;
 }
 
 @media (min-width: 992px) {
     .container_title {
         font-size: 250px;
-        animation: intro-desktop 4s ease 5s forwards;
+        animation: intro-desktop 6s ease 2s forwards;
     }
 }
 
@@ -85,13 +108,15 @@ body {
     flex-direction: row;
     justify-content: center;
     
-}
+}   
+
 .container_link {
     font-size: 50px;
     margin: 20px;
     color: white;
     opacity: 0;
-    animation: showText 10s ease 0s forwards;
+    animation: showText 1s ease 6s forwards;
+    
     
 }
 
@@ -105,35 +130,13 @@ body {
     0% {
         opacity: 0;
     }
-    90% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.background {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    transform: scale(1.1);
-    animation: hideBg 9s ease 0s forwards;
-}
-
-@keyframes hideBg {
-    0% {
-        opacity: 1;
-    }
     50% {
-        opacity: 0.5;
-    }
-    100% {
         opacity: 0;
     }
+    100% {
+        opacity: 1;
+        
+    }
 }
+
+
