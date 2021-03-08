@@ -1,16 +1,16 @@
 const bgIntro = document.querySelector(".container_bgIntro");
-const mediaQuery = window.matchMedia("(orientation: portrait)");
-const numberOfImgs = 6;
 
 const clearBgIntro = (interval) => {
     setTimeout(() => {
         clearInterval(interval);
         bgIntro.style.display = "none";
-    }, 7000)
+    }, 9000)
 }
 
 const switchImage = () => {
-
+    
+    const mediaQuery = window.matchMedia("(orientation: portrait)");
+    const numberOfImgs = 6;
     let imgNumber = 0;
 
     if (mediaQuery.matches) {

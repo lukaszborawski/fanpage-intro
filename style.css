@@ -1,142 +1,127 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 .container {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    overflow: hidden;
-    background-image: radial-gradient(rgb(131, 10, 10), rgb(32, 32, 32));
+  height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image: radial-gradient(rgb(131, 10, 10), rgb(32, 32, 32));
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .container_bgIntro {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    /* background-attachment: fixed; */
-    /* transform: scale(1.1); */
-    animation: hideBg 7s ease 0s forwards;
-    
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.1);
+  animation: hideBg 9s ease 0s forwards;
 }
 
 @keyframes hideBg {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 0;
+  }
 }
 .container_author {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: white;
-    opacity: 0;
-    animation: showText 1s ease 6s forwards;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0;
+  animation: showText 1s ease 6s forwards;
 }
 
 @media (min-width: 992px) {
-    .container_author {
-        font-size: 40px;
-    }
+  .container_author {
+      font-size: 40px;
+  }
 }
 
 .container_title {
-    text-transform: uppercase;
-    color: transparent;
-    font-size: 150px;
-    -webkit-text-stroke: 2px rgb(0, 0, 0);
-    opacity: 0;
-    animation: intro 6s ease 2s forwards;
+  text-transform: uppercase;
+  color: transparent;
+  font-size: 150px;
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  opacity: 0;
+  animation: intro 6s ease 2s forwards;
 }
 
 @media (min-width: 992px) {
-    .container_title {
-        font-size: 250px;
-        animation: intro-desktop 6s ease 2s forwards;
-    }
+  .container_title {
+      font-size: 250px;
+      animation: intro-desktop 6s ease 2s forwards;
+  }
 }
 
 @keyframes intro {
-    0% {
-        opacity: 1;
-    }
-    10% {
-        color: rgba(255, 255, 255, 0);
-    }
-    100% {
-        opacity: 1;
-        font-size: 50px;
-        color: rgba(255, 255, 255, 1);
-        
-    }
+  0% {
+      opacity: 1;
+  }
+  10% {
+      color: rgba(255, 255, 255, 0);
+  }
+  100% {
+      opacity: 1;
+      font-size: 50px;
+      color: rgba(255, 255, 255, 1);
+      
+  }
 }
 
 @keyframes intro-desktop {
-    0% {
-        opacity: 1;
-    }
-    10% {
-        color: rgba(255, 255, 255, 0);
-    }
-    100% {
-        opacity: 1;
-        font-size: 80px;
-        color: rgba(255, 255, 255, 1);
-        
-    }
-}
-
-.container_contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-}   
+  0% {
+      opacity: 1;
+  }
+  10% {
+      color: rgba(255, 255, 255, 0);
+  }
+  100% {
+      opacity: 1;
+      font-size: 80px;
+      color: rgba(255, 255, 255, 1);
+      
+  }
+} 
 
 .container_link {
-    font-size: 50px;
-    margin: 20px;
-    color: white;
-    opacity: 0;
-    animation: showText 1s ease 6s forwards;
-    
-    
+  font-size: 50px;
+  margin: 20px;
+  color: white;
+  opacity: 0;
+  animation: showText 1s ease 6s forwards; 
 }
 
 @media (min-width: 992px) {
-    .container_link {
-        font-size: 70px;
-    }
+  .container_link {
+      font-size: 70px;
+  }
 }
 
 @keyframes showText {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        
-    }
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+      
+  }
 }
-
-
