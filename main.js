@@ -1,4 +1,5 @@
-const bgIntro = document.querySelector(".container_bgIntro");
+const bgIntro = document.querySelector(".container__bgIntro");
+const replay = document.querySelector(".replay__item");
 
 const clearBgIntro = (interval) => {
     setTimeout(() => {
@@ -8,7 +9,7 @@ const clearBgIntro = (interval) => {
 }
 
 const switchImage = () => {
-    
+
     const mediaQuery = window.matchMedia("(orientation: portrait)");
     const numberOfImgs = 6;
     let imgNumber = 0;
@@ -18,17 +19,19 @@ const switchImage = () => {
             imgNumber = (imgNumber % numberOfImgs) + 1;
             bgIntro.style.backgroundImage = `url(img/${imgNumber}m.jpg)`
         }, 800);
-        
+
         clearBgIntro(interval);
-    
+
     } else {
         const interval = setInterval(() => {
             imgNumber = (imgNumber % numberOfImgs) + 1;
             bgIntro.style.backgroundImage = `url(img/${imgNumber}d.jpg)`
         }, 800);
-        
+
         clearBgIntro(interval);
-    } 
+    }
 }
 
 switchImage();
+
+replay.addEventListener("click", () => window.location.reload());
