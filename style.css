@@ -134,7 +134,7 @@
 
 .replay__box {
   position: absolute;
-  bottom: 35px;
+  top: 60px;
   right: 35px;
 }
 
@@ -144,4 +144,10 @@
   color: white;
   opacity: 0;
   animation: showText 1s ease 6s forwards; 
+}
+
+@media (min-width: 992px) {
+  .replay__item {
+      font-size: 25px;
+  }
 }
